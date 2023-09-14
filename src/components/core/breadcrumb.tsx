@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
   const segments = pathname.split("/").filter((segment) => segment !== "");
 
   return (
-    <main className="w-full max-w-7xl text-sm">
+    <main className="w-full max-w-7xl text-sm bg-blue-200">
       <div className="flex gap-2">
         {segments.map((segment, index) => {
           const currentSegment = segment === "[id]" ? " " : segment;
