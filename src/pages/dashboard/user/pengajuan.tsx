@@ -7,12 +7,16 @@ import Typography from "@/components/core/typography";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import Input from "@/components/forms/input";
 import SelectInput from "@/components/forms/select-input";
+import DatePicker from "@/components/forms/date-picker";
+
+import { HiOutlineCalendar } from "react-icons/hi";
 
 type Inputs = {
   name: string;
   kotaasal: string;
   kotatujuan: string;
   kendaraan: string;
+  date: string;
 };
 
 export default function Pengajuan() {
@@ -69,6 +73,15 @@ export default function Pengajuan() {
                 },
               ]}
               validation={{ required: "Kendaraan harus diisi" }}
+            />
+            <DatePicker
+              id="date"
+              validation={{
+                required: "Date must be filled",
+                valueAsDate: true,
+              }}
+              placeholder="dd/mm/yyyy"
+              leftIcon={HiOutlineCalendar}
             />
           </FormProvider>
         </form>
