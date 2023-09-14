@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  userid    Int         @id @default(autoincrement())
+  username  String
+  password  String
+  role      String      @default("USER")
+  Pengajuan Pengajuan[]
+}
+
+model Admin {
+  userid   Int    @id @default(autoincrement())
+  username String
+  password String
+  role     String @default("ADMIN")
+}
+
+model Kendaraan {
+  id        Int           @id @default(autoincrement())
+  jenis     TipeKendaraan
+  plat      String
+  Service   String
+  BBM       TipeBBM
+  Pengajuan Pengajuan[]
+  driver    String
+}
+
+enum TipeBBM {
+  Solar
+  Pertalite
+  Pertamax
+}
+
+enum TipeKendaraan {
+  Truck
+  PickUp
+  Container
+  Box
+}
+
+model Pengajuan {
+  id               Int             @id @default(autoincrement())
+  pengaju          Users           @relation(fields: [usersUserid], references: [userid])
+  usersUserid      Int
+  tanggal          String
+  status           StatusPengajuan
+  PilihanKendaraan Kendaraan       @relation(fields: [kendaraanId], references: [id])
+  kendaraanId      Int
+  keterangan       String
+}
+
+enum StatusPengajuan {
+  Diterima
+  Diproses
+  Disetujui
+  Ditolak
+}
