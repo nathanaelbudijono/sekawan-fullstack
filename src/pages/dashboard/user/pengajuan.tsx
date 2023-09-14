@@ -9,8 +9,6 @@ import Input from "@/components/forms/input";
 import SelectInput from "@/components/forms/select-input";
 import DatePicker from "@/components/forms/date-picker";
 
-import { HiOutlineCalendar } from "react-icons/hi";
-
 type Inputs = {
   name: string;
   kotaasal: string;
@@ -76,12 +74,12 @@ export default function Pengajuan() {
             />
             <DatePicker
               id="date"
+              label="Tanggal Perjalanan"
               validation={{
                 required: "Date must be filled",
                 valueAsDate: true,
               }}
               placeholder="dd/mm/yyyy"
-              leftIcon={HiOutlineCalendar}
             />
           </FormProvider>
         </form>
