@@ -42,7 +42,7 @@ export default function TextAreaInput({
   return (
     <div className={containerClassName}>
       {label && (
-        <div className="bg-d-600 flex w-fit px-3 py-1 border border-d-600 rounded-t-lg gap-2 items-center dark:bg-n-300 dark:border-n-200">
+        <div className="bg-d-600 flex w-fit py-1 border border-d-600 rounded-t-lg gap-2 items-center dark:bg-n-300 dark:border-n-200">
           {LeftIconLabel && <LeftIconLabel className="text-color-100 " />}
           <Typography as="label" variant="p" className="block" htmlFor={id}>
             {label}
