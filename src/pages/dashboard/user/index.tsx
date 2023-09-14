@@ -10,6 +10,7 @@ import { AiOutlineHistory } from "react-icons/ai";
 import { BsTruck } from "react-icons/bs";
 
 import clsx from "clsx";
+import Footer from "@/modules/footer";
 
 type User = {
   username: string;
@@ -20,7 +21,7 @@ export default function User({ user }: { user: User }) {
   return (
     <main>
       <Navbar />
-      <Layout className="flex h-screen flex-col">
+      <Layout className="flex h-[80vh] flex-col">
         <Typography variant="h4">Welcome {user?.username}</Typography>
         <section className="grid grid-cols-2 gap-5 max-sm:grid-cols-1">
           {Links?.map((item, index) => {
@@ -49,6 +50,7 @@ export default function User({ user }: { user: User }) {
           })}
         </section>
       </Layout>
+      <Footer />
     </main>
   );
 }

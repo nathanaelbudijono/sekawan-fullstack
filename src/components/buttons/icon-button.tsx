@@ -52,7 +52,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
           //#region  //*=========== Variants ===========
           [
             variant === "primary" && [
-              "bg-d-500 text-color-100",
+              "bg-d-500 text-blue-100",
               "border border-d-600",
               "dark:bg-n-200 border-n-300",
               "hover:bg-d-600 hover:border-d-500",
@@ -64,7 +64,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
               "dark:hover:bg-n-400 dark:border-n-500",
             ],
             variant === "ghost" && [
-              "hover:bg-primary-300 text-typography-100",
+              "hover:bg-primary-300 text-black",
               "dark:hover:bg-tertiary-300 dark:text-typography-800",
               "transition-all duration-200 ease-in",
             ],

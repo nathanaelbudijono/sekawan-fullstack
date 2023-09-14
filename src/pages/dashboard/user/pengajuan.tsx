@@ -12,6 +12,7 @@ import TextAreaInput from "@/components/forms/text-area";
 import Button from "@/components/buttons/button";
 
 import clsx from "clsx";
+import Footer from "@/modules/footer";
 
 type Inputs = {
   name: string;
@@ -103,6 +104,7 @@ export default function Pengajuan() {
           </FormProvider>
         </form>
       </Layout>
+      <Footer />
     </main>
   );
 }
