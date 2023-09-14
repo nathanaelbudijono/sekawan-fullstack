@@ -9,8 +9,9 @@ export default function Navbar() {
       <main
         className={clsx(
           "flex justify-between",
-          "px-16 max-md:px-6 sticky top-0 z-10 py-4",
-          " bg-red-200 bg-opacity-40 backdrop-blur-[2px] ",
+          "max-w-5xl mx-auto",
+          "py-4 max-md:py-3 px-16 max-md:px-6 sticky top-0 z-10",
+          "bg-red-200",
           "dark:bg-quaternary-300 dark:bg-opacity-40"
         )}
       >
@@ -25,6 +26,7 @@ export default function Navbar() {
           <PopoverIcon />
         </div>
       </main>
+      <Breadcrumbs />
     </>
   );
 }
