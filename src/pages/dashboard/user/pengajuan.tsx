@@ -6,10 +6,13 @@ import Layout from "@/components/core/layout";
 import Typography from "@/components/core/typography";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import Input from "@/components/forms/input";
+import SelectInput from "@/components/forms/select-input";
 
 type Inputs = {
   name: string;
-  password: string;
+  kotaasal: string;
+  kotatujuan: string;
+  kendaraan: string;
 };
 
 export default function Pengajuan() {
@@ -31,8 +34,41 @@ export default function Pengajuan() {
             <Input
               id="name"
               label="Nama pengaju"
-              validation={{ required: "Name must be filled" }}
+              validation={{ required: "Name harus diisi" }}
               placeholder="John Doe"
+            />
+            <Input
+              id="kotaasal"
+              label="Kota Asal"
+              validation={{ required: "Kota asal harus diisi" }}
+              placeholder="Surabaya"
+            />
+            <Input
+              id="kotatujuan"
+              label="Kota Tujuan"
+              validation={{ required: "Kota tujuan harus diisi" }}
+              placeholder="Jakarta"
+            />
+            <SelectInput
+              id="kendaraan"
+              label="Pilih Kendaraan"
+              placeholder="Select something"
+              options={[
+                { value: "Truck", label: "Truck" },
+                {
+                  label: "PickUp",
+                  value: "PickUp",
+                },
+                {
+                  label: "Container",
+                  value: "Container",
+                },
+                {
+                  label: "Box",
+                  value: "Box",
+                },
+              ]}
+              validation={{ required: "Kendaraan harus diisi" }}
             />
           </FormProvider>
         </form>
