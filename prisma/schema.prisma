@@ -26,13 +26,13 @@ model Admin {
 }
 
 model Kendaraan {
-  id        Int           @id @default(autoincrement())
-  jenis     TipeKendaraan
-  plat      String
-  Service   String
-  BBM       TipeBBM
-  Pengajuan Pengajuan[]
-  driver    String
+  id      Int           @id @default(autoincrement())
+  jenis   TipeKendaraan
+  plat    String
+  Service String
+  BBM     TipeBBM
+
+  driver String
 }
 
 enum TipeBBM {
@@ -50,15 +50,15 @@ enum TipeKendaraan {
 
 model Pengajuan {
   id               Int             @id @default(autoincrement())
-  pengaju          Users           @relation(fields: [usersUserid], references: [userid])
-  usersUserid      Int
+  idPengaju        Users           @relation(fields: [usersUserid], references: [userid])
   tanggal          String
   status           StatusPengajuan
-  PilihanKendaraan Kendaraan       @relation(fields: [kendaraanId], references: [id])
-  kendaraanId      Int
+  PilihanKendaraan String
   keterangan       String
   kotaAsal         String
   kotaTujuan       String
+  namaPengaju      String
+  usersUserid      Int
 }
 
 enum StatusPengajuan {

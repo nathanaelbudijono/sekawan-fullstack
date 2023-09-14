@@ -13,6 +13,8 @@ import Button from "@/components/buttons/button";
 
 import clsx from "clsx";
 import Footer from "@/modules/footer";
+import { useAppStore } from "@/lib/store";
+import { useRouter } from "next/router";
 
 type Inputs = {
   name: string;
@@ -24,12 +26,22 @@ type Inputs = {
 };
 
 export default function Pengajuan() {
+  const { postForm } = useAppStore();
+  const router = useRouter();
   const methods = useForm<Inputs>({
     mode: "onTouched",
   });
   const { handleSubmit } = methods;
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    console.log(data);
+    const forms = new FormData();
+    forms.append("name", data.name);
+    forms.append("kotaasal", data.kotaasal);
+    forms.append("kotatujuan", data.kotatujuan);
+    forms.append("kendaraan", data.kendaraan);
+    forms.append("date", data.date);
+    forms.append("keterangan", data.keterangan);
+    await postForm(forms);
+    router.push("/dashboard/user/riwayat");
     return;
   };
   return (
