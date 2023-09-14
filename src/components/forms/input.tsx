@@ -44,7 +44,7 @@ export default function Input({
   return (
     <div className={containerClassName}>
       {label && (
-        <div className="bg-d-600 flex w-fit px-3 py-1 border border-d-600 rounded-t-lg gap-2 items-center dark:bg-n-300 dark:border-n-200">
+        <div className="bg-d-600 flex w-fit  py-1 border border-d-600 rounded-t-lg gap-2 items-center dark:bg-n-300 dark:border-n-200">
           {LeftIconLabel && <LeftIconLabel className="text-color-100" />}
           <Typography as="label" variant="p" className="block" htmlFor={id}>
             {label}
@@ -71,7 +71,7 @@ export default function Input({
           disabled={disabled}
           className={clsx(
             "flex w-full  shadow-sm dark:bg-slate-700",
-            label ? "rounded-tr-lg rounded-bl-lg rounded-br-lg" : "rounded-lg",
+            "rounded-lg",
             "py-2 px-2",
             "border-gray-300",
             (readOnly || disabled) &&

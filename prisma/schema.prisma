@@ -57,6 +57,8 @@ model Pengajuan {
   PilihanKendaraan Kendaraan       @relation(fields: [kendaraanId], references: [id])
   kendaraanId      Int
   keterangan       String
+  kotaAsal         String
+  kotaTujuan       String
 }
 
 enum StatusPengajuan {
