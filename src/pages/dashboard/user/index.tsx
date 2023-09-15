@@ -54,7 +54,7 @@ export default function User({ user }: { user: User }) {
     </main>
   );
 }
-const icons = [AiOutlineHistory, BsTruck];
+const icons = [BsTruck, AiOutlineHistory];
 
 const Links = [
   {

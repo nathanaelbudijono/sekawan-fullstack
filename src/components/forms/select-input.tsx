@@ -8,7 +8,7 @@ import Typography from "../core/typography";
 import { ExtractProps } from "@/type/helper";
 
 export type SearchableSelectInputProps = {
-  label: string | null;
+  label?: string | null;
   id: string;
   placeholder?: React.ReactNode;
   helperText?: string;
