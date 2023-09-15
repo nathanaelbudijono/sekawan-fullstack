@@ -10,6 +10,7 @@ import SelectInput from "@/components/forms/select-input";
 import DatePicker from "@/components/forms/date-picker";
 import TextAreaInput from "@/components/forms/text-area";
 import Button from "@/components/buttons/button";
+import Seo from "@/components/core/seo";
 
 import clsx from "clsx";
 import Footer from "@/modules/footer";
@@ -46,6 +47,10 @@ export default function Pengajuan() {
   };
   return (
     <main>
+      <Seo
+        title="Pengajuan"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis lacinia mi."
+      />
       <Navbar />
       <Layout className="flex flex-col">
         <Typography variant="h4">Formulir Pengajuan</Typography>
@@ -53,7 +58,7 @@ export default function Pengajuan() {
           onSubmit={handleSubmit(onSubmit)}
           className={clsx(
             "flex flex-col gap-3",
-            "bg-slate-100 px-3 py-2 shadow-sm rounded-sm"
+            "bg-secondary-100 bg-opacity-50 px-3 py-2 shadow-sm rounded-sm"
           )}
         >
           <FormProvider {...methods}>
@@ -108,7 +113,8 @@ export default function Pengajuan() {
             <TextAreaInput
               label="Keterangan"
               id="keterangan"
-              placeholder="Keterangan tambahan (optional)"
+              placeholder="Keterangan"
+              validation={{ required: "Keterangan harus diisi" }}
             />
             <Button type="submit" variant="primary" className="mt-3">
               Ajukan

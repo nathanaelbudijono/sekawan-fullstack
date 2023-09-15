@@ -26,7 +26,7 @@ export async function getAdmin(ctx: GetServerSidePropsContext) {
     } else {
       return {
         redirect: {
-          destination: "/notfound",
+          destination: "/dashboard/user",
         },
       };
     }

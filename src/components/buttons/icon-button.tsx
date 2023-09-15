@@ -45,15 +45,16 @@ const IconButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
           //#region  //*=========== Size ===========
           [
             size === "lg" && ["px-3 py-2.5"],
-            size === "base" && ["p-2"],
+            size === "base" && ["p-1"],
             size === "sm" && ["px-2 py-1.5"],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
           [
             variant === "primary" && [
-              "bg-red-200",
-              "hover:bg-d-600 hover:border-d-500",
+              "bg-primary-100 text-typography-100",
+              "hover:bg-primary-200",
+              "transition-colors duration-200 ease-in-out",
             ],
             variant === "outline" && [
               "bg-clip-padding backdrop-filter backdrop-blur-sm border border-d-400 text-color-100",
@@ -61,7 +62,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
               "dark:hover:bg-n-400 dark:border-n-500",
             ],
             variant === "ghost" && [
-              "hover:bg-primary-300 text-black",
+              "hover:bg-primary-200 text-typography-100",
               "dark:hover:bg-tertiary-300 dark:text-typography-800",
               "transition-all duration-200 ease-in",
             ],

@@ -1,8 +1,9 @@
+import * as React from "react";
 import Button from "@/components/buttons/button";
 import Modal from "@/components/core/modal";
 import Typography from "@/components/core/typography";
+
 import { useAppStore } from "@/lib/store";
-import * as React from "react";
 
 type modalProps = {
   id: number;
@@ -20,14 +21,20 @@ export default function StatusModal({ id, status }: modalProps) {
     <>
       <Modal open={open} setOpen={setOpen} title="Modal Title">
         <Modal.Section>
-          <Typography variant="h4" className="text-start">
-            Ajuan no {id}
-          </Typography>
-          <span className="h-[2px] bg-d-100 w-full"> </span>
-          <section className="text-start">
+          <section className="flex justify-between items-center">
+            <Typography variant="h4" className="text-start">
+              Ajuan Nomor {id}
+            </Typography>
+            <Typography variant="small" className="text-start">
+              {kendaraan?.rows?.tanggal.substring(0, 10)}
+            </Typography>
+          </section>
+
+          <span className="h-[2px] bg-primary-300 w-full"></span>
+          <section className="text-start mt-3 flex gap-2 flex-col">
             <Typography variant="small">Status : {status}</Typography>
             <Typography variant="small">
-              Kendaraan :{kendaraan?.rows?.kendaraan?.jenis}
+              Kendaraan : {kendaraan?.rows?.kendaraan?.jenis}
             </Typography>
             <Typography variant="small">
               Plat : {kendaraan?.rows?.kendaraan?.plat}
@@ -42,6 +49,9 @@ export default function StatusModal({ id, status }: modalProps) {
               Driver : {kendaraan?.rows?.kendaraan?.driver}
             </Typography>
           </section>
+          <Typography variant="small" className="text-start mt-3">
+            Keterangan : {kendaraan?.rows?.keterangan}
+          </Typography>
         </Modal.Section>
         <Modal.Section>
           <div className="flex justify-end">

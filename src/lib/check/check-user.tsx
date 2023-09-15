@@ -26,7 +26,7 @@ export async function getUser(ctx: GetServerSidePropsContext) {
     } else {
       return {
         redirect: {
-          destination: "/notfound",
+          destination: "/dashboard/admin",
         },
       };
     }

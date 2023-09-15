@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
   const segments = pathname.split("/").filter((segment) => segment !== "");
 
   return (
-    <main className="w-full max-w-5xl text-sm bg-blue-200 px-16 max-md:px-6 mx-auto z-10 py-4">
+    <main className="w-full max-w-5xl text-sm bg-secondary-100 bg-opacity-50 px-16 max-md:px-6 mx-auto z-10 py-4">
       <div className="flex gap-2">
         {segments.map((segment, index) => {
           const currentSegment = segment === "[id]" ? " " : segment;
@@ -20,7 +20,11 @@ export default function Breadcrumbs() {
             <div key={segmentPath}>
               <Link
                 href={segmentPath}
-                className={index === 0 ? "text-color-100" : "text-n-500"}
+                className={
+                  index === segments.length - 1
+                    ? " text-primary-200"
+                    : "text-typography-800"
+                }
               >
                 {capitalizedSegment} {"/"}
               </Link>

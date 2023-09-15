@@ -39,20 +39,13 @@ module.exports = {
 
         "color-100": "#F9F7F7",
 
-        "primary-100": "#ABE0FF",
-        "primary-200": "#599FFF",
-        "primary-300": "#1B80FF",
-        "primary-400": "#0065DF",
-        "primary-500": "#004CC0",
-        "primary-600": "#0034A1",
-        "primary-700": "#002084",
+        "primary-100": "#02275d",
+        "primary-200": "#425390",
+        "primary-300": "#ebeeff",
 
-        "secondary-100": "#D0D0E4",
-        "secondary-200": "#A4A5B7",
-        "secondary-300": "#7B7B8D",
-        "secondary-400": "#535465",
-        "secondary-500": "#2F303F",
-        "secondary-600": "#1C1D2B",
+        "secondary-100": "#cbcdd1",
+        "secondary-200": "#deeeec",
+        "secondary-300": "#3c8b84",
       },
       screens: {
         xs: "400px",

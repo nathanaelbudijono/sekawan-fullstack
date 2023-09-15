@@ -1,3 +1,4 @@
+// http://localhost:3000/api/register/user
 // import prisma from "@/lib/prisma";
 // import { NextApiRequest, NextApiResponse } from "next";
 
@@ -10,7 +11,7 @@
 //   switch (req.method) {
 //     case "POST":
 //       try {
-//         const user = await prisma.admin.create({
+//         const user = await prisma.users.create({
 //           data: {
 //             username: username,
 //             password: password,

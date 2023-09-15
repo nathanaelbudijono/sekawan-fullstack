@@ -3,11 +3,11 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const defaultMeta = {
-  title: "Nathanael",
-  siteName: "Portfolio Website",
+  title: "PT Tambang Jaya",
+  siteName: "PT Tambang Jaya",
   description:
-    "Welcome to my digital notebook where I share what I'm learning about shipping great products, becoming a better developer and growing a career in tech.",
-  url: "https://nathanaelbudijono.vercel.app/",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at neque ac dui venenatis dignissim et eu augue. Maecenas vitae aliquam enim.",
+  url: "https://localhost:3000/",
   type: "website",
   robots: "follow, index",
   image: "/logo.png",

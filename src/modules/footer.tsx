@@ -16,13 +16,25 @@ export default function Footer() {
         </div>
         <div className="flex gap-2">
           <UnstyledLink href="mailto:nathanaelbudijono@gmail.com">
-            <IconButton variant="ghost" icon={AiFillMail} />
+            <IconButton
+              variant="ghost"
+              icon={AiFillMail}
+              className="text-typography-800 hover:text-typography-100"
+            />
           </UnstyledLink>
           <UnstyledLink href="https://github.com/nathanaelbudijono">
-            <IconButton variant="ghost" icon={AiFillGithub} />
+            <IconButton
+              variant="ghost"
+              icon={AiFillGithub}
+              className="text-typography-800 hover:text-typography-100"
+            />
           </UnstyledLink>
           <UnstyledLink href="https://www.linkedin.com/in/nathanael-budijono/">
-            <IconButton variant="ghost" icon={AiFillLinkedin} />
+            <IconButton
+              variant="ghost"
+              icon={AiFillLinkedin}
+              className="text-typography-800 hover:text-typography-100"
+            />
           </UnstyledLink>
         </div>
       </section>

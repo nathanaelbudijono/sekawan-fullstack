@@ -53,8 +53,7 @@ const ButtonLink = React.forwardRef<HTMLButtonElement, ButtonProps>(
           //#region  //*=========== Variants ===========
           [
             variant === "primary" && [
-              "bg-gradient-to-r from-primary-400  to-primary-100",
-              "dark:from-quaternary-300 dark:to-quaternary-200",
+              "bg-primary-100 hover:bg-primary-200 transition-colors duration-200 ease-in-out",
             ],
 
             variant === "outline" && [

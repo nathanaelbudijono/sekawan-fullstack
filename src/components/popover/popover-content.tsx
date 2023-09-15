@@ -38,7 +38,7 @@ export default function PopoverIcon({ ...rest }: ExamplePopoverProps) {
           <button
             onClick={logoutUser}
             className={clsx(
-              "w-full outline-none hover:bg-yellow-200 px-3 py-2 rounded-sm",
+              "w-full outline-none hover:bg-secondary-200 px-3 py-2 rounded-sm",
               "flex gap-2 items-center text-sm",
               "transition-colors duration-200 ease-in-out hover:shadow-sm"
             )}
