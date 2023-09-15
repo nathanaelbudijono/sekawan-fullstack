@@ -22,14 +22,14 @@ type Inputs = {
 };
 
 export default function Home() {
-  const { loginUser, errorMessage } = useAppStore();
+  const { loginadmin, errorMessage } = useAppStore();
   const router = useRouter();
   const methods = useForm<Inputs>({
     mode: "onTouched",
   });
   const { handleSubmit } = methods;
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    await loginUser(data.username, data.password);
+    await loginadmin(data.username, data.password);
     router.push("/dashboard/admin");
     return;
   };

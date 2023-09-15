@@ -4,13 +4,14 @@ import { apiUrl } from "@/constant/env";
 
 export interface Form {
   rows: {
+    id: number;
     namaPengaju: string;
     kotaAsal: string;
     keterangan: string;
     kotaTujuan: string;
     status: string;
     tanggal: string;
-    PilihanKendaraan: string;
+    kendaraanId: number;
   }[];
 }
 

@@ -8,20 +8,19 @@ import Layout from "@/components/core/layout";
 import Typography from "@/components/core/typography";
 import Footer from "@/modules/footer";
 import useForm from "@/lib/get-form";
+import Table from "@/modules/user/riwayat";
+import SearchHeader from "@/modules/user/search-header";
 
 export default function Riwayat() {
-  const forms = useForm();
-  console.log(forms);
+  const { formFilter, search, setSearch } = useForm();
+
   return (
     <main>
       <Navbar />
       <Layout className="flex flex-col h-screen">
         <Typography variant="h4">Riwayat & Status Pengajuan</Typography>
-        {forms?.rows?.map((item) => (
-          <main>
-            <p>{item?.kotaAsal}</p>
-          </main>
-        ))}
+        <SearchHeader search={search} setSearch={setSearch} />
+        <Table formFilter={formFilter} />
       </Layout>
       <Footer />
     </main>

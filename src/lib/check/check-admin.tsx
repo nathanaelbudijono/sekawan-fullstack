@@ -20,7 +20,7 @@ export async function getAdmin(ctx: GetServerSidePropsContext) {
     if (userToken.role === "ADMIN") {
       return {
         props: {
-          user: userToken,
+          admin: userToken,
         },
       };
     } else {

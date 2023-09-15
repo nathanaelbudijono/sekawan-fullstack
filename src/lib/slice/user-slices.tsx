@@ -9,17 +9,27 @@ export interface User {
   ait: number;
 }
 
+export interface Admin {
+  id: number;
+  username: string;
+  role: string;
+  ait: number;
+}
+
 export interface UserState {
   users: User | null;
+  admin: Admin | null;
   loginUser: (username: string, password: string) => Promise<void>;
   loginadmin: (username: string, password: string) => Promise<void>;
   getUserInfo: () => void;
+  getAdminInfo: () => void;
   logout: () => void;
   errorMessage?: string;
   errorMessageadmin?: string;
 }
 export const userSlice: StateCreator<UserState> = (set, get) => ({
   users: null,
+  admin: null,
   errorMessage: "",
   logout: async () => {
     await axios.post(`${apiUrl}/logout`);
@@ -53,5 +63,11 @@ export const userSlice: StateCreator<UserState> = (set, get) => ({
     } catch (err) {
       throw err;
     }
+  },
+  getAdminInfo: async () => {
+    try {
+      const adminInfo = await axios.get(`${apiUrl}/login/admin`);
+      set({ admin: adminInfo.data });
+    } catch (err) {}
   },
 });

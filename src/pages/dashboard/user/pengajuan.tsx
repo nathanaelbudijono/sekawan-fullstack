@@ -80,18 +80,18 @@ export default function Pengajuan() {
               label="Pilih Kendaraan"
               placeholder="Pilih satu kendaraan"
               options={[
-                { value: "Truck", label: "Truck" },
+                { value: "1", label: "Truck" },
                 {
                   label: "PickUp",
-                  value: "PickUp",
+                  value: "2",
                 },
                 {
                   label: "Container",
-                  value: "Container",
+                  value: "3",
                 },
                 {
                   label: "Box",
-                  value: "Box",
+                  value: "4",
                 },
               ]}
               validation={{ required: "Kendaraan harus diisi" }}

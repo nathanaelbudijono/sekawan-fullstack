@@ -19,20 +19,21 @@ model Users {
 }
 
 model Admin {
-  userid   Int    @id @default(autoincrement())
-  username String
-  password String
-  role     String @default("ADMIN")
+  userid    Int         @id @default(autoincrement())
+  username  String
+  password  String
+  role      String      @default("ADMIN")
+  Pengajuan Pengajuan[]
 }
 
 model Kendaraan {
-  id      Int           @id @default(autoincrement())
-  jenis   TipeKendaraan
-  plat    String
-  Service String
-  BBM     TipeBBM
-
-  driver String
+  id        Int           @id @default(autoincrement())
+  jenis     TipeKendaraan
+  plat      String
+  Service   String
+  BBM       TipeBBM
+  driver    String
+  Pengajuan Pengajuan[]
 }
 
 enum TipeBBM {
@@ -49,16 +50,19 @@ enum TipeKendaraan {
 }
 
 model Pengajuan {
-  id               Int             @id @default(autoincrement())
-  idPengaju        Users           @relation(fields: [usersUserid], references: [userid])
-  tanggal          String
-  status           StatusPengajuan
-  PilihanKendaraan String
-  keterangan       String
-  kotaAsal         String
-  kotaTujuan       String
-  namaPengaju      String
-  usersUserid      Int
+  id          Int             @id @default(autoincrement())
+  idPengaju   Users           @relation(fields: [usersUserid], references: [userid])
+  tanggal     String
+  status      StatusPengajuan
+  kendaraan   Kendaraan       @relation(fields: [kendaraanId], references: [id])
+  keterangan  String
+  kotaAsal    String
+  kotaTujuan  String
+  namaPengaju String
+  usersUserid Int
+  kendaraanId Int
+  admin       Admin?          @relation(fields: [adminUserid], references: [userid])
+  adminUserid Int?
 }
 
 enum StatusPengajuan {

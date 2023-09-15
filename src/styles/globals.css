@@ -12,3 +12,16 @@
   display: block;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .form {
+    padding: 2rem 1.5rem;
+  }
+}
+td {
+  font-size: 12px;
+  font-weight: 400;
+}
+th {
+  font-size: 12px;
+}

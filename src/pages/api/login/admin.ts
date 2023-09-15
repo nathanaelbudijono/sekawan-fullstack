@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { serialize } from "cookie";
 
-interface User {
+interface Admin {
   username: string;
   password: string;
   userid: number;
@@ -18,7 +18,7 @@ export default async function handler(
   switch (req.method) {
     case "POST":
       try {
-        const resUser: User | null = await prisma.admin.findFirst({
+        const resUser: Admin | null = await prisma.admin.findFirst({
           where: { username: username },
         });
         if (resUser) {

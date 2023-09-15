@@ -64,7 +64,7 @@ export default async function handleForm(
                       namaPengaju: data.fields.name[0] as string,
                       kotaAsal: data.fields.kotaasal[0] as string,
                       kotaTujuan: data.fields.kotatujuan[0] as string,
-                      PilihanKendaraan: data.fields.kendaraan[0] as string,
+                      kendaraanId: parseInt(data.fields.kendaraan[0]) as number,
                       keterangan: data.fields.keterangan[0] as string,
                       tanggal: data.fields.date[0] as string,
                       status: "Diterima",
