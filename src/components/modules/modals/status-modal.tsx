@@ -21,14 +21,12 @@ export default function StatusModal({ id, status }: modalProps) {
     <>
       <Modal open={open} setOpen={setOpen} title="Modal Title">
         <Modal.Section>
-          <section className="flex justify-between items-center">
-            <Typography variant="h4" className="text-start">
-              Ajuan Nomor {id}
-            </Typography>
-            <Typography variant="small" className="text-start">
-              {kendaraan?.rows?.tanggal.substring(0, 10)}
-            </Typography>
-          </section>
+          <Typography variant="h4" className="text-start">
+            Ajuan Nomor {id}
+          </Typography>
+          <Typography variant="small" className="text-start mb-3">
+            {kendaraan?.rows?.tanggal}
+          </Typography>
 
           <span className="h-[2px] bg-primary-300 w-full"></span>
           <section className="text-start mt-3 flex gap-2 flex-col">
