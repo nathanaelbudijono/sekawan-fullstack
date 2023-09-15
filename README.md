@@ -30,6 +30,7 @@ Fill in username and password for user & admin model, you can use postman
 - admin : http://localhost:3000/api/register/admin (fill username and password with JSON format)
 
 make sure DATABASE_URL at env is filled.
+Database ERD can be accesed at public folder.
 
 ## Demo
 
