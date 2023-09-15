@@ -25,7 +25,7 @@ export default function Table2({
   const tableRef = React.useRef(null);
   return (
     <main className="overflow-auto w-full">
-      <section className="absolute sm:-translate-y-10">
+      <section>
         <DownloadTableExcel
           filename="pengajuan table"
           sheet="users"

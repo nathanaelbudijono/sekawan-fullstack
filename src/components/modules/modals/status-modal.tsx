@@ -17,6 +17,14 @@ export default function StatusModal({ id, status }: modalProps) {
   React.useEffect(() => {
     getKendaraan(id);
   }, []);
+
+  const jenis = status === "Diterima" ? "-" : kendaraan?.rows?.kendaraan?.jenis;
+  const plat = status === "Diterima" ? "-" : kendaraan?.rows?.kendaraan?.plat;
+  const service =
+    status === "Diterima" ? "-" : kendaraan?.rows?.kendaraan?.Service;
+  const bbm = status === "Diterima" ? "-" : kendaraan?.rows?.kendaraan?.BBM;
+  const driver =
+    status === "Diterima" ? "-" : kendaraan?.rows?.kendaraan?.driver;
   return (
     <>
       <Modal open={open} setOpen={setOpen} title="Modal Title">
@@ -31,21 +39,11 @@ export default function StatusModal({ id, status }: modalProps) {
           <span className="h-[2px] bg-primary-300 w-full"></span>
           <section className="text-start mt-3 flex gap-2 flex-col">
             <Typography variant="small">Status : {status}</Typography>
-            <Typography variant="small">
-              Kendaraan : {kendaraan?.rows?.kendaraan?.jenis}
-            </Typography>
-            <Typography variant="small">
-              Plat : {kendaraan?.rows?.kendaraan?.plat}
-            </Typography>
-            <Typography variant="small">
-              Service : {kendaraan?.rows?.kendaraan?.Service}
-            </Typography>
-            <Typography variant="small">
-              BBM : {kendaraan?.rows?.kendaraan?.BBM}
-            </Typography>
-            <Typography variant="small">
-              Driver : {kendaraan?.rows?.kendaraan?.driver}
-            </Typography>
+            <Typography variant="small">Kendaraan : {jenis}</Typography>
+            <Typography variant="small">Plat : {plat}</Typography>
+            <Typography variant="small">Service : {service}</Typography>
+            <Typography variant="small">BBM : {bbm}</Typography>
+            <Typography variant="small">Driver : {driver}</Typography>
           </section>
           <Typography variant="small" className="text-start mt-3">
             Keterangan : {kendaraan?.rows?.keterangan}

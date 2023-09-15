@@ -47,7 +47,7 @@ const ItemComponent = ({ item }: any) => {
 
   return (
     <div
-      className="bg-red-200 w-full px-3 py-2 rounded-sm shadow-sm"
+      className="bg-secondary-100 bg-opacity-50 w-full px-3 py-2 rounded-sm shadow-sm"
       key={item.id}
     >
       <div className="flex justify-between items-center">
@@ -112,7 +112,7 @@ export default function Ajuan() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis lacinia mi."
       />
       <Navbar />
-      <Layout className="h-[80vh] flex flex-col max-sm:h-full">
+      <Layout className="flex flex-col max-sm:h-full">
         <Typography variant="h4">Kotak masuk</Typography>
         <section className="grid grid-cols-2 gap-5 max-sm:grid-cols-1">
           {adminforms?.rows?.map((item) => (
