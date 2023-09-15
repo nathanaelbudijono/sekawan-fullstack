@@ -1,4 +1,5 @@
 import Layout from "@/components/core/layout";
+import Typography from "@/components/core/typography";
 import { getAdmin } from "@/lib/check/check-admin";
 import Footer from "@/modules/footer";
 import Navbar from "@/modules/navbar";
@@ -9,7 +10,7 @@ export default function Ajuan() {
     <main>
       <Navbar />
       <Layout className="h-[80vh] flex flex-col">
-        <h1>Ajuan tersedia</h1>
+        <Typography variant="h4">Kotak masuk</Typography>
       </Layout>
       <Footer />
     </main>

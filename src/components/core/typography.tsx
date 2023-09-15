@@ -76,7 +76,7 @@ const Typography: TypographyComponent = React.forwardRef(
             variant === "large" && ["text-lg font-semibold"],
             variant === "lead" && ["text-xl"],
             variant === "small" && [
-              "text-sm font-[400] leading-none max-sm:text-xs",
+              "text-[12px] font-[400] leading-none max-sm:text-xs",
             ],
             variant === "muted" && ["text-sm text-typography-500"],
           ],

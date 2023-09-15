@@ -69,6 +69,7 @@ export default async function handleForm(
                       tanggal: data.fields.date[0] as string,
                       status: "Diterima",
                       usersUserid: id,
+                      adminUserid: 1,
                     },
                   });
 

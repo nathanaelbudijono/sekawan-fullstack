@@ -22,7 +22,6 @@ export interface Kendaraan {
     kendaraanId: number;
   }[];
 }
-
 export interface KendaraanState {
   kendaraan: Kendaraan;
   getKendaraan: (id: number) => void;
