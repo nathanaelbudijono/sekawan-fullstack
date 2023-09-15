@@ -2,7 +2,7 @@
 
 ## Tech stack
 
-Project ini dibuat dengan menggunakan
+This project is made using.
 
 - Framework : NextJs
 - Language : TypeScript
@@ -13,24 +13,24 @@ Project ini dibuat dengan menggunakan
 
 ## Folder Structure
 
-Project ini dibagi menjadi beberapa bagian pada source, yaitu
+Source project structure.
 
-- components : Kumpulan reusable component
+- components : Reusable components
 - constant : env
-- lib : state management dan function-
-- modules : component
-- pages : isi dari halaman dan api
+- lib : State management and functions
+- modules : Components
+- pages : pages and api
 - type : types
 
 ## Setup
 
-Isi username dan database menggunakan postman dengan API
+Fill in username and password for user & admin model, you can use postman
 
-- user : http://localhost:3000/api/register/user (isi dengan json username dan password)
-- admin : http://localhost:3000/api/register/admin (isi dengan json username dan password)
+- user : http://localhost:3000/api/register/user (fill username and password with JSON format)
+- admin : http://localhost:3000/api/register/admin (fill username and password with JSON format)
 
-pastikan env database_url juga terhubung dengan prisma.
+make sure DATABASE_URL at env is filled.
 
-## Demo dan Penggunaan
+## Demo
 
-Demo dapat dinonton pada youtube [link](https://youtu.be/jweBrtNSYCE)
+Watch the demo at youtube [link](https://youtu.be/jweBrtNSYCE)
