@@ -7,13 +7,13 @@ import Navbar from "@/modules/navbar";
 import Typography from "@/components/core/typography";
 import Seo from "@/components/core/seo";
 
-import getKendaraan from "@/lib/get-kendaraan";
+import GetKendaraan from "@/lib/get-kendaraan";
 
 import { getAdmin } from "@/lib/check/check-admin";
 import { GetServerSidePropsContext } from "next";
 
 export default function Kendaraan() {
-  const kendaraan2 = getKendaraan();
+  const kendaraan2 = GetKendaraan();
   return (
     <main>
       <Seo
