@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function handlePagination() {
+export default function HandlePagination() {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 4;
   const indexOfLastItem = currentPage * itemsPerPage;
