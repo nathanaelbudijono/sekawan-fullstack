@@ -40,6 +40,7 @@ export default function User({ user }: { user: User }) {
                   "hover:bg-secondary-300 hover:bg-opacity-50",
                   "transition-all duration-200 ease-in-out"
                 )}
+                key={index}
               >
                 <UnstyledLink href={item?.link}>
                   <Icon

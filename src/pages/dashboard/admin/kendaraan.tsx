@@ -26,7 +26,10 @@ export default function Kendaraan() {
         <section className="grid grid-cols-2 gap-5 max-sm:grid-cols-1">
           {kendaraan2?.rows?.map((item) => {
             return (
-              <div className="bg-secondary-100 bg-opacity-50 w-full px-3 py-2 rounded-sm shadow-sm">
+              <div
+                className="bg-secondary-100 bg-opacity-50 w-full px-3 py-2 rounded-sm shadow-sm"
+                key={item?.id}
+              >
                 <Typography variant="p">Mobil {item?.jenis}</Typography>
                 <Typography variant="small" className="mt-2">
                   Keterangan

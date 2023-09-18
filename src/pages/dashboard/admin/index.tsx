@@ -35,6 +35,7 @@ export default function Admin({ admin }: { admin: Admin }) {
                   "hover:bg-secondary-300 hover:bg-opacity-50",
                   "transition-all duration-200 ease-in-out"
                 )}
+                key={index}
               >
                 <UnstyledLink href={item?.link}>
                   <Icon

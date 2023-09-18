@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useAppStore } from "./store";
-export default function getKendaraan() {
+export default function useKendaraan() {
   const { getKendaraan2, kendaraan2 } = useAppStore();
   React.useEffect(() => {
     getKendaraan2();
